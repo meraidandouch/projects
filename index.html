@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Tabs Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading sidebar:', error));
+        });
+    </script>
+    <title>About</title>
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div id="content">
+        <header>
+            <h1>Welcome to my About page! </h1>
+        </header>
+        <main>
+                <h3 class="gray-background"> I currently have a: 
+                <ul> <i class="fa-solid fa-scroll"></i> M.S. in Bioinformatics - Boston University </ul>
+                <ul> <i class="fa-solid fa-scroll"></i> B.S. in Biology | Minor in Computer Science -  California State University Channel Islands </ul>
+                </h3>
+                <p style="font-size: 18px" class="gray-background">
+                    Beyond my educational qualifications, I'm motivated by finding meaningful insights from complex genetic data and making these findings accessible through computational tools.
+                    In undergrad, I worked as a research assistant studying the effects of anthropogenic led environmental stressors on California mussels 
+                    such as extreme wave action, oxidation, rising temperatures, UV light exposure, and ingestion of microplastic adsorbing polycyclic aromatic hydrocarbons (PAHs). 
+                    As one would presume, marine research is admirable, and I often had the opportunity to conduct field work in tide pools of the beautiful <a href="https://g.co/kgs/xpZWK9x"> Santa Rosa Island </a>. 
+                    However, understanding marine life at a molecular and genetic level was what really shaped my passion for this field. 
+                    My primary focus as a molecular team member, was to measure physiological phenotypic responses through qRT-PCR 
+                    and transcriptomic methods.
+                    <br><br>
+                    Transitioning from analyzing ecological research to clinical omic-data bioinformatics involved learning new analysis techniques such as 
+                    Python, R, SQL, NoSQL. This website showcases the diverse projects I've 
+                    undertaken as a M.S. Bioinformatics student, as well as independently. Click the <strong> Projects </strong> tab to see more.
+                    <br><br>
+                    Overall, I’m fueled by my curiosity. I'm able to work flexibly within teams to meet their needs. 
+                    My goal is always to stay aligned with the team and meet goals and deadlines while contributing postively 
+                    to collaborative environments. 
+                    <br>
+                </p>
+
+                <h3>Extracurricular</h3>
+                
+                <ol>
+                    <li><i class="fa-solid fa-pencil"></i> LRC Biostats and Biology Tutor </li>
+                    <li><i class="fa-solid fa-code"></i> CI Women in Tech  </li>                 
+                </ol>
+
+                <h3>My Hobbies</h3>
+                <ol>
+                    <li><i class="fa-solid fa-person"></i> Spending time with family and friends</li>
+                    <li><i class="fa-solid fa-table-tennis-paddle-ball"></i> Playing Pickleball</li>
+                    <li>
+                        <i class="fa-solid fa-gamepad"></i> 
+                        Playing automation video games, my current favorite is <a href="https://store.steampowered.com/app/1318690/shapez/">Shapez</a>!
+                    </li>                   
+                    <li><i class="fa-solid fa-music"></i> Listening to music</a></li>
+                    <li><i class="fa-solid fa-person-hiking"></i> and sometimes ... hiking</a></li>
+                </ol>
+            <br><br>
+            <img src="img/me.jpg" alt="Description of the image" width="500" height="500">
+
+            <br> <br>
+                ^^^ Here I am up 3,000 ft in elevation after a 6-hour long hike in the Upper Falls Trail in Yosemite. 
+                <br> The breathtaking 
+                and unforgettable views at the top made this challenge worth it!
+                <br>
+                 .... and much less dangerous than half dome!
+                 <i class="fa-solid fa-face-grin-beam-sweat"></i>
+
+        </main>
+    </div>  
+</body>
+</html>

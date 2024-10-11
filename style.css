@@ -1,0 +1,129 @@
+img {
+    max-width: 100%; /* Ensure it scales responsively */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+#sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+#sidebar a {
+    display: block;
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+#sidebar a:hover {
+    background-color: #ddd;
+}
+#content {
+    flex: 1;
+    padding: 5px;
+}
+
+.sidebar-bottom {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    margin-top: auto; /* Push to the bottom */
+}
+
+.sidebar-bottom i {
+    font-size: 30px; /* Adjust size as needed */
+    color: #333; /* Icon color */
+}
+
+.sidebar-bottom a {
+    text-decoration: none; /* Remove underline */
+}
+.gray-background {
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray */
+    padding: 10px; /* Optional padding for spacing */
+    border-radius: 5px; /* Optional rounded corners */
+}
+
+.icon-small {
+    font-size: 100px; /* Adjust the size as needed */
+}
+
+
+  .description {
+    width: 70%; /* Set width for the description */
+    float: left; /* Float the description to the left */
+}
+
+.sidebar {
+    width: 25%; /* Set width for the sidebar */
+    float: right; /* Float the sidebar to the right */
+}
+
+.sidebar li {
+    font-size: 1.5em; /* Increase size of sidebar items */
+    list-style: none; /* Remove bullet points */
+    margin-bottom: 160x; /* Space between items */
+}
+
+.sidebar li i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Clear floats after the sidebar */
+.sidebar::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between images */
+}
+
+.side-by-side {
+    width: 48%; /* Set the width of each image */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+h1 {
+    text-align: center;
+}
+.skills {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.skill-bar {
+    margin: 20px 0;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.skill {
+    height: 30px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+.tag {
+    background: grey;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}

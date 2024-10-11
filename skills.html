@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading sidebar:', error));
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .skills {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .skill-bar {
+            margin: 20px 0;
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .skill {
+            height: 30px;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 5px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .tag {
+            background: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        #sidebar-container {
+            float: left;
+            width: 200px; /* Adjust width as needed */
+            margin-right: 20px; /* Space between sidebar and main content */
+        }
+        .content {
+            overflow: hidden; /* Clear floats */
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <div class="content">
+        <div class="skills">
+            <h1>My Skills</h1>
+            <br>
+            <div>
+                <h3>Python</h3>
+                <div class="skill-bar">
+                    <div class="skill" style="width: 90%; background: #4caf50;">90%</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Scikit-Learn</span>
+                    <span class="tag">Scanpy</span>
+                    <span class="tag">Anndata</span>
+                    <span class="tag">Matplotlib</span>
+                    <span class="tag">Seaborn</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Folium</span>
+                    <span class="tag">Google Search API</span>
+                    <span class="tag">Google Charts API</span>
+                </div>
+            </div>
+
+            <div>
+                <h3>R</h3>
+                <div class="skill-bar">
+                    <div class="skill" style="width: 85%; background: #e91e63;">85%</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Rshiny</span>
+                    <span class="tag">RMarkdown</span>
+                    <span class="tag">Bioconductor</span>
+                    <span class="tag">DeSeq2</span>
+                    <span class="tag">limma</span>
+                    <span class="tag">edgeR</span>
+                    <span class="tag">biomaRt</span>
+                    <span class="tag">Seurat</span>
+                    <span class="tag">GSEAbase</span>
+                    <span class="tag">fgsea</span>
+                </div>
+            </div>
+
+            <div>
+                <h3>SQL</h3>
+                <div class="skill-bar">
+                    <div class="skill" style="width: 80%; background: #2196f3;">80%</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">SQL</span>
+                </div>
+            </div>
+
+            <div>
+                <h3>NoSQL</h3>
+                <div class="skill-bar">
+                    <div class="skill" style="width: 70%; background: #ff9800;">70%</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Neo4j</span>
+                    <span class="tag">Cypher</span>
+                </div>
+            </div>
+
+            <div>
+                <h3>Linux</h3>
+                <div class="skill-bar">
+                    <div class="skill" style="width: 50%; background: #673ab7;">50%</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Unix/Linux scripting</span>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div>
+            <h3>Other Skills</h3>
+            <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">jQuery</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Flask</span>
+                <span class="tag">MSigDB</span>
+                <span class="tag">NCBI</span>
+                <span class="tag">PDB</span>
+                <span class="tag">GTEx</span>
+                <span class="tag">qRT-PCR</span>
+                <span class="tag">PCR</span>
+                <span class="tag">gel electrophoresis</span>
+                <span class="tag">micropipetting</span>
+                <span class="tag">GitHub</span>
+                <span class="tag">Visual Studio</span>
+                <span class="tag">Jupyter notebook</span>
+                <span class="tag">JMP</span>
+                <span class="tag">Microsoft Office Suite</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

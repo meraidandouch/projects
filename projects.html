@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Tabs Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading sidebar:', error));
+        });
+    </script>
+</head>
+<body>
+<div id="sidebar-container"></div>
+    <div id="project contents">
+        <h1> Projects</h1>
+        <div id = "project 1 description" class="gray-background">
+        <h2 class="gray-background"> RShiny Transcriptomic Analysis Tool </h2> 
+        <p style="font-size: 18px">
+                A R BF591 - R for Biological Sciences ginal project, 
+                this RShiny app attempts to summarize RNASeq bioinformatics 
+                studies and processes into multiple tabs. Given metadata,
+                raw count, differential expression, and gene enrichment 
+                data, the website will process it and return a series of 
+                analyses and graphs. This website displays four pages including:
+                    <li>Samples Tab</li>
+                    <li>Counts Tab</li>
+                    <li>DeSeq Tab</li>
+                    <li>FGSEA Tab</li>
+        </p> 
+                    <div class="sidebar">
+                        <li><a href="https://github.com/meraidandouch/bf591-finalproject"><i class="fab fa-github"></i> <span> Code </span></a></li>
+                        <li><a href="https://meraidandouch.shinyapps.io/DESeqTool/?_ga=2.175646827.898463768.1657910214-827194594.1656546077"><i class='fas fa-columns'></i> <span> App</span></a></li>
+                    </div>
+            
+                <iframe width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/s_qsnyB6wiM?si=jI60MRATlwZQLJff" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                </iframe>
+        </div>
+
+        <br>
+
+        <br>
+
+        <div id = "project 2 description" class="gray-background">
+        <h2 class="gray-background"> Graph Database Infrastructure Internship </h2> 
+        <p style="font-size: 20px">
+            The BU Neuromics Lab is working towards building a database that stores a myriad of 
+            data types such as genomic modalities, clinical data and subject information from the
+             PTSD Brain Bank repository. The PTSD Brain Bank is led by Veterans Affair National 
+             Center for PTSD which stores brain tissue samples from particpants who were 
+             diagnosed with PTSD and Alzheimer’s disease (Friedman et al., 2017). 
+             Their ultimate goal is to answer the question of how stress impacts brain functioning. 
+             I worked with the BUSM Neuromics Lab to help build a database infrastructure to store a myriad 
+             of genomic modalities and clinical information using a Neo4j database platform on a CentOS VM server. 
+             The challenge with omics data is its multi-dimensional nature, requiring threads of relationships 
+             between datapoints and large disk space volume. While Neo4j is memory-intensive, its key advantages include scalability and 
+             flexible schemas for complex relationship modeling. To complete a prototype of the database, 
+             I worked to resolve memory and efficiency issues  using Cypher, Python, Unix, and Flask API.
+        </p>    
+             <div class="sidebar">
+                <li><a href="https://github.com/meraidandouch/neo4j_internship"><i class="fab fa-github"></i> <span> Code </span></a></li>
+                <li><a href="https://docs.google.com/presentation/d/1mPLnq2_0U5xNmZ5QAnzURZaBHz4mSRCXVB8EsxWOtXs/edit#slide=id.g142f2a0eac5_0_24"><i class='fas fa-columns'></i> <span> Presentation </span></a></li>
+            </div>
+            <div class="image-container">
+                <img src="img/ptsdbb.png" alt="Image 1" class="side-by-side">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div id = "project 3 description" class="gray-background">
+            <h2 class="gray-background"> Single Cell RNA-Seq Analysis of Pancreatic Cells </h2>
+            <p style="font-size: 20px">
+                    This project attempts to replicate findings from Baron et al., 2016 by processing 
+                    the barcode reads of a single cell sequencing dataset, performing cell-by-gene 
+                    quantification of UMI counts and perform quality control on a UMI counts matrix 
+                    to ascribe biological meaning to the clustered cell types and identify novel marker 
+                    genes associated with them. My role as the analyst was to analyze the UMI counts to 
+                    identify clusters and marker genes for distinct cell type populations using the 
+                    Suerat package in R. This project was developed as part of the BF528 Application in Bioinformatics course, 
+                    Spring 2022. 
+            </p>
+                <br>
+                <div class="sidebar">
+                    <li><a href="https://github.com/meraidandouch/BF528-project4-hedgehog-1"><i class="fab fa-github"></i> <span>Code</span></a></li>
+                </div>
+                <div class="image-container">
+                    <img src="img/umap.png" alt="Image 2" class="side-by-side">
+                    <img src="img/heatmap.png" alt="Image 3" class="side-by-side">
+                </div>
+        </div>
+        <br>
+        <br>
+        <div id = "project 4 description" class="gray-background">
+            <h2 class="gray-background"> Baboon Microbiome Diversity Analysis Using Python </h2>
+            <p style="font-size: 20px">
+                The goal of the project is to practice data analysis in Python. 
+                I chose to replicate findings in Miller et al., 2017 and report 
+                results and limitations. Although it's being debated whether 
+                the microbiota of another ogranism can can generalize the human microbiota,
+                the vaginal microbiota of baboons across various reproductive states during specific ovarian cycles 
+                were studied to better understand the underlying patterns of microbiomes 
+                where lactobacilli do not dominate. Because I started with unprocessed data, 
+                processing data was the main aspect of the project. Statistical 
+                analysis was completed using Python 3.9.7 on Visual Studio Code 
+                IDE. This project includes code for calculating cumulative sum 
+                normalization, OTU richness, phyla grouping and read count proportions, 
+                and alpha and beta diversity. I computed a variety of figures such 
+                as relative abundance barplots, alpha and OTU richness spread using 
+                boxplots, and finally PcoA coordinates using Bray-Curtis dissimilarity 
+                matrix.
+                <br> 
+                The original paper can be found here: <a href="https://pubmed.ncbi.nlm.nih.gov/28103920/"> link to paper </a>
+            </p>
+                <br>
+                <div class="sidebar">
+                    <li><a href="https://github.com/meraidandouch/BF528-project4-hedgehog-1"><i class="fab fa-github"></i> <span>Code</span></a></li>
+                </div>
+                    <img src="img/fig1.png" alt="Image 2"><br>
+                    <img src="img/Fig3.png" alt="Image 3"><br>
+                    <img src="img/Fig4.png" alt="Image 3">
+        </div>
+        <br>
+        <br>
+        <div id = "project 5 description" class="gray-background">
+            <h2 class="gray-background"> COVID19 MSA Analysis - Receptor Binding Domain (RBM) Anticipated Walker </h2>
+            <p style="font-size: 20px">
+                This project includes a anticipated mutational drift script that determines the next variant for Covid19. 
+                It uses the RBM region of UFP04971.1[OMICRON] as a base and mutates it based off literature and liklehood
+                 probability of mutating. This could be used by scientist to create a vaccine that anticipates mutations 
+                 and evolves with virus. The vaccine should focus on the rbm regions due to high variability and significance
+                  of transmissibility in this region. Below there is a series of phylogenetic trees representing the 
+                  multi-sequence alignment between the spike protein region, RBD region, and the RBM region. 
+                  The RBD region shares a similar relationship to the spike protein phylogenetic tree. 
+                  However,the OMICRON RBM region diverges to form a clade on its own.
+            </p>
+                <br>
+                <div class="sidebar">
+                    <li><a href="https://github.com/meraidandouch/RBM_AnticipatedWalker?tab=readme-ov-file"><i class="fab fa-github"></i> <span>Code</span></a></li>
+                </div>
+                    <img src="img/phylo.png" alt="Image 4" width="650" height="650"><br>
+        </div>
+    
+</div>
+
+</body>
