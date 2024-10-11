@@ -17,54 +17,7 @@
                 .catch(error => console.error('Error loading sidebar:', error));
         });
     </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-        }
-        .skills {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .skill-bar {
-            margin: 20px 0;
-            background: #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .skill {
-            height: 30px;
-            color: white;
-            text-align: center;
-            line-height: 30px;
-            border-radius: 5px;
-        }
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 10px 0;
-        }
-        .tag {
-            background: #007bff;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-        #sidebar-container {
-            float: left;
-            width: 200px; /* Adjust width as needed */
-            margin-right: 20px; /* Space between sidebar and main content */
-        }
-        .content {
-            overflow: hidden; /* Clear floats */
-        }
-    </style>
+
 </head>
 <body>
     <div id="sidebar-container"></div>
