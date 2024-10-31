@@ -1,18 +1,26 @@
+/* Image Styling */
 img {
-    max-width: 100%; /* Ensure it scales responsively */
-    height: auto;    /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #f4f4f4;
 }
+
+/* Sidebar */
 #sidebar {
     width: 250px;
     background-color: #f4f4f4;
     padding: 10px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
+
 #sidebar a {
     display: block;
     padding: 5px;
@@ -21,109 +29,157 @@ body {
     border-radius: 4px;
     margin: 5px 0;
 }
+
 #sidebar a:hover {
     background-color: #ddd;
 }
+
+/* Content */
 #content {
     flex: 1;
     padding: 5px;
 }
 
+/* Sidebar Bottom Icons */
 .sidebar-bottom {
     display: flex;
-    gap: 10px; /* Space between icons */
-    margin-top: auto; /* Push to the bottom */
+    gap: 10px;
+    margin-top: auto;
 }
 
 .sidebar-bottom i {
-    font-size: 30px; /* Adjust size as needed */
-    color: #333; /* Icon color */
+    font-size: 30px;
+    color: #333;
 }
 
 .sidebar-bottom a {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
+
+/* Gray Background Box */
 .gray-background {
-    background-color: rgba(0, 0, 0, 0.1); /* Light gray */
-    padding: 10px; /* Optional padding for spacing */
-    border-radius: 5px; /* Optional rounded corners */
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
 }
 
+/* Icon Styling */
 .icon-small {
-    font-size: 100px; /* Adjust the size as needed */
+    font-size: 100px;
 }
 
-
-  .description {
-    width: 70%; /* Set width for the description */
-    float: left; /* Float the description to the left */
+/* Description and Sidebar Layout */
+.description {
+    width: 70%;
+    float: left;
 }
 
 .sidebar {
-    width: 25%; /* Set width for the sidebar */
-    float: right; /* Float the sidebar to the right */
+    width: 25%;
+    float: right;
 }
 
 .sidebar li {
-    font-size: 1.5em; /* Increase size of sidebar items */
-    list-style: none; /* Remove bullet points */
-    margin-bottom: 160x; /* Space between items */
+    font-size: 1.5em;
+    list-style: none;
+    margin-bottom: 10px;
 }
 
 .sidebar li i {
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 5px;
 }
 
-/* Clear floats after the sidebar */
 .sidebar::after {
     content: "";
     display: table;
     clear: both;
 }
 
+/* Image Container */
 .image-container {
     display: flex;
-    justify-content: space-between; /* Adjust spacing between images */
+    justify-content: space-between;
 }
 
 .side-by-side {
-    width: 48%; /* Set the width of each image */
+    width: 48%;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
-}
+
+/* Header */
 h1 {
     text-align: center;
 }
+
+/* Skills Section */
 .skills {
     max-width: 600px;
     margin: 0 auto;
 }
+
 .skill-bar {
     margin: 20px 0;
     background: #ddd;
     border-radius: 5px;
-    overflow: visible;
+    overflow: hidden;
 }
+
 .skill {
     height: 30px;
     color: black;
     text-align: center;
     line-height: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
+
+/* Tags */
 .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin: 10px 0;
 }
+
 .tag {
     background: grey;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Stack sidebar and content vertically */
+    body {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        box-shadow: none;
+        padding-bottom: 20px;
+    }
+
+    #content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .description, .sidebar {
+        width: 100%;
+        float: none;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-by-side {
+        width: 100%;
+    }
+
+    .sidebar-bottom {
+        justify-content: center;
+    }
 }
